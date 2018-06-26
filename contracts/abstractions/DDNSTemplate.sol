@@ -1,7 +1,8 @@
 pragma solidity ^0.4.23;
 
 contract DDNSTemplate {
-    struct Receipt{
+    
+    struct Receipt { 
         uint amountPaidWei;
         uint timestamp;
         uint expires;

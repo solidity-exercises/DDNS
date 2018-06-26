@@ -68,7 +68,7 @@ contract('DDNS', function (accounts) {
 			const firstCost = await ddnsInstance.getPrice(firstDomainName);
 			const receipt = await ddnsInstance.register(firstDomainName, firstDomainIP, {from: _notOwner, value: firstCost});
 			await timeTravel(web3, 31557601);
-			const rec = await ddnsInstance.register(firstDomainName, firstDomainIP, {from: _buyer, value: firstCost});
+			const rec = await ddnsInstance.register(firstDomainName, "0x12121213", {from: _buyer, value: firstCost});
 			assert(rec.receipt.status == 1, "Domain didn't expire")
 			points += 3;
 		});
