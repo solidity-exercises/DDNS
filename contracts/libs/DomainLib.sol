@@ -27,6 +27,10 @@ library DomainLib {
         _self.expires += 365 days;
     }
 
+    function resetExpiry(DomainInfo storage _self) public {
+        _self.expires = now + 365 days;
+    }
+
     function hasExpired(DomainInfo storage _self) public view returns (bool) {
         return now > _self.expires;
     }
