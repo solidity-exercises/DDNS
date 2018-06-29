@@ -1,0 +1,25 @@
+{
+  "name": "DDNS",
+  "version": "1.0.0",
+  "description": "Implementation of the DDNS final course project.",
+  "main": "truffle-config.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/solidity-exercises/DDNS.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/solidity-exercises/DDNS/issues"
+  },
+  "homepage": "https://github.com/solidity-exercises/DDNS#readme"
+}
