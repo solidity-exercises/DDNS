@@ -94,7 +94,12 @@ contract DDNS is DDNSTemplate, Destructible {
     
     function getPrice(bytes _domain) public view returns (uint) {
         require(_domain.length > MIN_DOMAIN_NAME_LENGTH);
-        return REGISTRATION_FEE + _domain.length * (100 finney);
+
+        uint extraFee = bytes(_domain).length < 2 * MIN_DOMAIN_NAME_LENGTH ? 
+                        (MIN_DOMAIN_NAME_LENGTH*2 - bytes(_domain).length) * (250 finney) : 
+                        0;
+
+        return REGISTRATION_FEE + extraFee;
     }
 
     function _newReceipt(address _recepient, uint _payment, uint _expiration, bytes _domainName) private {

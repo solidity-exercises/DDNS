@@ -49,14 +49,4 @@ library SafeMath {
     assert(c >= a);
     return c;
   }
-
-  function divmul(uint256 a, uint256 b, uint256 c) internal pure returns (uint256) {
-    if (c == 0) {
-      c += 1;
-    }
-    
-    uint division = div(a, b);
-    uint multiply = mul(division, c);
-    return multiply;
-  }
 }
